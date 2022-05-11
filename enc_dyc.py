@@ -1,10 +1,9 @@
-import base64
-import os
-import sys
-from mod import gen
-
-cipher=(gen.create_cipher(sys.argv[1]))
-text=gen.decrypt_cipher(cipher)
-print(text)
+from mod import engine
 
 
+text=input("enter msg:")
+cipher,key=engine.get_cipher(text)
+original=engine.get_original(cipher,key)
+
+print("encrypted :",cipher)
+print("decrypted :",original)
