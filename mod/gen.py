@@ -1,6 +1,5 @@
 #55295
 import random
-from cryptography.fernet import Fernet
 from mod.crypto import encrypt,decrypt
 
 
