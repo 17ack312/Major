@@ -1,5 +1,6 @@
 import base64
 import os
+import sys
 from mod import gen
 
 cipher=(gen.create_cipher(sys.argv[1]))
