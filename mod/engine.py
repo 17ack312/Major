@@ -16,7 +16,7 @@ def get_cipher(text):
     #print(cipher)
     temp=[]
     for c in cipher:
-        temp.append(chr(int(c)*len(cipher)))
+        temp.append(chr(int(c)*len(key)))
     cipher=("".join(map(str,temp)))
 
     return cipher,key
@@ -28,7 +28,7 @@ def get_original(cipher,key):
     #print(text)
     temp=[]
     for t in text:
-        temp.append(int(ord(t)/len(text)))
+        temp.append(int(ord(t)/len(key)))
     temp=("".join(map(str, temp)))
     #print(temp)
     temp=(decrypt.hex_decypt(temp))
